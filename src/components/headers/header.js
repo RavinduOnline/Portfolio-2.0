@@ -27,11 +27,11 @@ export default function Header() {
 
 
   return (
-    <div className='w-100 '>
+    <div className='w-full  fixed  bg-white top-0 '>
         <nav className='mx-auto px-52  flex pb-4 justify-between border-b-4 border-gray-200'>
             <div className='flex w-full'>
                 <div className=' mr-16 bg-black max-w-fit  pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl'>
-                    <img className='h-20' src="https://pokedexnet.web.app/static/media/dev-logo.6c5009b22e2e76d077ab.png" alt="" />
+                    <img className='h-12' src="./images/ravindu-logo.png" alt="" />
                 </div>
 
                 <div className='flex'>
