@@ -4,7 +4,7 @@ import React from 'react'
 export default function Skills() {
 
   return (
-    <div className='py-12'>
+    <div>
         
         <h1 className='text-6xl text-red-500 font-bold'>Skills</h1>
 

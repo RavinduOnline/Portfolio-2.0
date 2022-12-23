@@ -35,10 +35,10 @@ const socialMedia = [
 
 export default function About() {
   return (
-    <div className='py-12'> 
-        <h1 className='text-6xl text-red-500 font-bold'>About Me</h1>
+    <div> 
+        <h1 className=' text-center text-6xl text-red-500 font-bold'>- About Me -</h1>
       
-        <div className='w-full h-auto flex mt-10'>
+        <div className='w-full h-auto flex mt-16'>
             <div className='w-full'>
                 <h1 className='text-4xl text-red-500 font-bold'>Who am I ? 🤔</h1>
 

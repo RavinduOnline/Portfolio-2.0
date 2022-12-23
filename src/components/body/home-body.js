@@ -1,13 +1,15 @@
 import React from 'react'
 
+
 export default function HomeBody() {
+
   return (
     <div style={{ 
         backgroundImage: 'url(/images/home-bg-design.png)' , 
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',}}>
-
+            
         <div className='w-full flex h-screen  px-52'>
             <div className='w-full h-auto flex items-center'>
                 <div className='w-full h-auto'>
@@ -22,7 +24,9 @@ export default function HomeBody() {
                 <div className='flex justify-end items-end w-full'>
                     <img  className='h-5/6' src="./images/profile-card.png" alt="" />
                 </div>
-            </div>
+            </div>        
+        
+
         </div>
 
     </div>
