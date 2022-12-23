@@ -10,6 +10,10 @@ const navItems = [
       link:"/about"
     },
     {
+      text:"Skills",
+      link:"/skills"
+    },
+    {
       text:"Education & Experience",
       link:"/educationandexperience"
     },
@@ -27,7 +31,7 @@ export default function Header() {
 
 
   return (
-    <div className='w-full  fixed  bg-white top-0 '>
+    <div className='w-full  fixed  bg-black 00 top-0 '>
         <nav className='mx-auto px-52  flex pb-4 justify-between border-b-4 border-gray-200'>
             <div className='flex w-full'>
                 <div className=' mr-16 bg-black max-w-fit  pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl'>
@@ -38,7 +42,7 @@ export default function Header() {
                     {navItems.map(item=>{
 
                       return(
-                        <a href={item.link} className='font-bold pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl flex items-end hover:bg-red-500 hover:text-white ' onMouseOver="this.style.color='#0F0'"
+                        <a href={item.link} className=' text-white font-bold pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl flex items-end hover:bg-red-500 hover:text-white ' onMouseOver="this.style.color='#0F0'"
                         >
                             {item.text}
                         </a>

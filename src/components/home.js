@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './headers/header'
 import HomeBody from './body/home-body'
 import About from './about/about'
+import Skills from './skills/skills'
 
 export default function Home() {
   return (
@@ -12,8 +13,11 @@ export default function Home() {
         <dib className="min-h-screen">
           <HomeBody/>
         </dib>
+        <div className='px-52'>
+          <About/>
 
-        <About/>
+          <Skills/>
+        </div>
       </div>
     </div>
   )
