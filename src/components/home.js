@@ -2,10 +2,12 @@ import {React, useCallback} from 'react'
 import Particles from "react-tsparticles";
 import particlesConfig from './config/particlesConfig';
 import { loadFull } from "tsparticles";
-import Header from './headers/header'
-import HomeBody from './body/home-body'
-import About from './about/about'
-import Skills from './skills/skills'
+
+import Header from './headers/header';
+import HomeBody from './body/home-body';
+import About from './about/about';
+import Skills from './skills/skills';
+import Education from './education/education';
 
 export default function Home() {
   const particlesInit = useCallback(async engine => {
@@ -40,11 +42,14 @@ export default function Home() {
               <About/>
             </div>
 
-            <div className='px-52 py-12'>
+            <div className='px-52 py-12' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
               <Skills/>
             </div>
              
-           
+            <div className='px-52 py-12 bg-gray-100'>
+              <Education/>
+            </div>
+
           </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ export default function Header() {
 
 
   return (
-    <div className='w-full  fixed  bg-black 00 top-0 '>
+    <div className='w-full  fixed  bg-black top-0' style={{ zIndex: 999}}>
         <nav className='mx-auto px-52  flex pb-4 justify-between border-b-4 border-gray-200'>
             <div className='flex w-full'>
                 <div className=' mr-16 bg-black max-w-fit  pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl'>
