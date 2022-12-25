@@ -27,13 +27,13 @@ export default function ProjectCard( { data }) {
             <div className="px-4 py-2 w-full flex">
               {
                 data.github ? 
-                  <a href={data.github} className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold mr-2'>Github</a>
+                  <a href={data.github} target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold mr-2'>Github</a>
                 : <></>
               }
 
               {
                 data.demo ? 
-                  <a href={data.demo} className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold'>Demo</a>
+                  <a href={data.demo}  target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold'>Demo</a>
                 : <></>
               }
                 

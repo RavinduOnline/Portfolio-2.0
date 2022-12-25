@@ -12,13 +12,10 @@ import Experience from './experience/experience';
 import Project from './project/project';
 import Contact from './contact/contact'
 import Footer from './footer/footer';
+import ScrollToTop from './scroll-to-top/scroll-to-top'
 
 export default function Home() {
   const particlesInit = useCallback(async engine => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
@@ -28,45 +25,43 @@ export default function Home() {
 
   
   return (
-    <div>
-
+    <div className='scroll-mt-56'>
         <div className='absolute'>
-            <Particles  init={particlesInit}  options={particlesConfig}/>
+            <Particles  init={particlesInit} loaded={particlesLoaded}  options={particlesConfig}/>
         </div>
-
+         
         <div className=' relative'>
           <Header/>
        
 
           <div className='mt-3 w-full'>
-            <dib className="min-h-screen">
+            <section id="home" className="min-h-screen">
               <HomeBody/>
-            </dib>
-            <div className='px-52 py-12 bg-gray-100'>
+            </section>
+            <section id="about" className='px-52 py-12 bg-gray-100 scroll-m-24'>
               <About/>
-            </div>
+            </section>
 
-            <div className='px-52 py-12' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
+            <section id="skills" className='px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
               <Skills/>
-            </div>
+            </section>
              
-            <div className='px-52 py-12 bg-gray-100'>
+            <section id="education" className='px-52 py-12 bg-gray-100 scroll-m-24'>
               <Education/>
-            </div>
+            </section>
 
-            <div className='px-52 py-12' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
+            <section id="project" className='px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
               <Project/>
-            </div>
+            </section>
 
-            <div className='px-52 py-12 bg-gray-100'>
+            <section id="experience" className='px-52 py-12 bg-gray-100 scroll-m-24'>
               <Experience/>
-            </div>
-            <div>
+            </section>
+            <section id="contact">
               <Contact/>
-            </div>
-
+            </section>
             <Footer/>
-
+            <ScrollToTop/>
           </div>
       </div>
     </div>

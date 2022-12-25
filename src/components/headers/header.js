@@ -1,29 +1,34 @@
 import {React,  useState} from 'react'
+import { NavLink, Link } from 'react-router-dom';
 
 const navItems = [
     {
       text:"Home",
-      link:"/"
+      link:"#home"
     },
     {
       text:"About",
-      link:"/about"
+      link:"#about"
     },
     {
       text:"Skills",
-      link:"/skills"
+      link:"#skills"
     },
     {
-      text:"Education & Experience",
-      link:"/educationandexperience"
+      text:"Education",
+      link:"#education"
     },
     {
       text:"Projects",
-      link:"/projects"
+      link:"#project"
+    },
+    {
+      text:"Experience",
+      link:"#experience"
     },
     {
       text:"Contact",
-      link:"/contact"
+      link:"#contact"
     }
 ]
 
@@ -62,7 +67,7 @@ export default function Header() {
                     {navItems.map(item=>{
 
                       return(
-                        <a href={item.link} className={` ${navbarItemCSS} font-bold pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl flex items-end hover:bg-red-500 hover:text-white`} onMouseOver="this.style.color='#0F0'"
+                        <a href={item.link}  className={` ${navbarItemCSS}  font-bold pt-6 pb-4 px-6 rounded-br-2xl rounded-bl-2xl flex items-end hover:bg-red-500 hover:text-white`} onMouseOver="this.style.color='#0F0'"
                         >
                             {item.text}
                         </a>
@@ -72,7 +77,7 @@ export default function Header() {
             </div>
 
             <div>
-              nnn
+              {/* nnn */}
             </div>
         </nav>
     </div>
