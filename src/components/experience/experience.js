@@ -14,7 +14,7 @@ export default function Experience() {
                 {
                     WorkData.map((data, index) =>(
                         <>
-                        {index%2 == 0 ?
+                        {index%2 === 0 ?
                             <LeftCard data={data} />
                         : 
                             <RightCard data={data}/>

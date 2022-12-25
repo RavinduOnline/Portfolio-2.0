@@ -8,7 +8,8 @@ import HomeBody from './body/home-body';
 import About from './about/about';
 import Skills from './skills/skills';
 import Education from './education/education';
-import Experience from './experience/experience'
+import Experience from './experience/experience';
+import Project from './project/project';
 
 export default function Home() {
   const particlesInit = useCallback(async engine => {
@@ -49,6 +50,10 @@ export default function Home() {
              
             <div className='px-52 py-12 bg-gray-100'>
               <Education/>
+            </div>
+
+            <div className='px-52 py-12' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
+              <Project/>
             </div>
 
             <div className='px-52 py-12 bg-gray-100'>
