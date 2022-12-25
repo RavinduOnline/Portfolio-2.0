@@ -10,6 +10,8 @@ import Skills from './skills/skills';
 import Education from './education/education';
 import Experience from './experience/experience';
 import Project from './project/project';
+import Contact from './contact/contact'
+import Footer from './footer/footer';
 
 export default function Home() {
   const particlesInit = useCallback(async engine => {
@@ -59,6 +61,11 @@ export default function Home() {
             <div className='px-52 py-12 bg-gray-100'>
               <Experience/>
             </div>
+            <div>
+              <Contact/>
+            </div>
+
+            <Footer/>
 
           </div>
       </div>
