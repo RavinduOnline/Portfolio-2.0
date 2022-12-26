@@ -10,6 +10,16 @@
         image: "images/project-img/portfolio-web.png",
     },
     {
+        id:10,
+        title:"PokeDex",
+        date:"2022 Dec",
+        about:"I've created PokéDex cards just for fun using React and Tailwind. I've used Poke API to fetch these pokémons and their details. Firebase was used for hosting.",
+        tags:["PokéDex","React","Tailwind", " Poke_API" , "Firebase", "Pokemons"],
+        demo:"https://pokedexnet.web.app",
+        github:"https://github.com/RavinduOnline/PokemonWorld",
+        image: "images/project-img/poke-dex.png",
+    },
+    {
         id:9,
         title:"Cargills Website Redesign",
         date:"2022 Jul - 2022 Oct",
