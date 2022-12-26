@@ -13,21 +13,21 @@ export default function Project() {
 
   return (
     <div>
-        <h1 className=' text-center text-5xl text-white font-bold'>- Projects -</h1>
+        <h1 className=' text-center text-5xl text-white font-bold' data-aos="zoom-in">- Projects -</h1>
 
-      
-        <Slider {...settings}>
+      <div data-aos="fade-down-right">
+          <Slider {...settings} >
 
-        {
-                ProjectData.map((data,index) =>(
+          {
+                  ProjectData.map((data,index) =>(
 
 
-                        <ProjectCard data={data} />
+                          <ProjectCard data={data} />
 
-                ))
-            }
-        </Slider>
-        
+                  ))
+              }
+          </Slider>
+        </div>
 
     </div>
   )

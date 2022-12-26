@@ -64,10 +64,6 @@ const SkillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
-        name:"Android Studio",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
-    },
-    {
         name:"Firebase",
         icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     },
@@ -92,17 +88,21 @@ const SkillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
     },
     {
-        name:"MS SQL Server",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-    },
-    {
         name:"Adobe XD",
         icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
     },
     {
         name:"Figma",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    }
+    },
+    {
+        name:"Android Studio",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+    },
+    {
+        name:"MS SQL Server",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    },
 ]
 
 export default SkillsData;

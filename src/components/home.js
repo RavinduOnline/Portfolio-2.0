@@ -38,23 +38,23 @@ export default function Home() {
             <section id="home" className="min-h-screen">
               <HomeBody/>
             </section>
-            <section id="about" className='px-52 py-12 bg-gray-100 scroll-m-24'>
+            <section id="about" className='px-10 lg:px-52 py-12 bg-gray-100 scroll-m-24'>
               <About/>
             </section>
 
-            <section id="skills" className='px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
+            <section id="skills" className='px-10 lg:px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
               <Skills/>
             </section>
              
-            <section id="education" className='px-52 py-12 bg-gray-100 scroll-m-24'>
+            <section id="education" className='px-10 lg:px-52 py-12 bg-gray-100 scroll-m-24'>
               <Education/>
             </section>
 
-            <section id="project" className='px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
+            <section id="project" className='px-10 lg:px-52 py-12 scroll-m-24' style={{ background:"linear-gradient(to right, #DD2476, #FF512F)" }}>
               <Project/>
             </section>
 
-            <section id="experience" className='px-52 py-12 bg-gray-100 scroll-m-24'>
+            <section id="experience" className='px-10 lg:px-52 py-12 bg-gray-100 scroll-m-24'>
               <Experience/>
             </section>
             <section id="contact">

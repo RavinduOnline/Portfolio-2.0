@@ -27,10 +27,10 @@ export default function Contact() {
                 <div className="-mx-4 flex flex-wrap lg:justify-between">
                     <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
                     <div className="mb-12 max-w-[570px] lg:mb-0">
-                        <span className="text-primary mb-4 block text-base font-semibold">
+                        <span className="pl-5 text-primary mb-4 block text-base font-semibold">
                         Contact Me
                         </span>
-                        <h2 className="text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                        <h2 className="pl-5 text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                         GET IN TOUCH 
                         </h2>
                         {/* <p className="text-body-color mb-9 text-base leading-relaxed"></p> */}

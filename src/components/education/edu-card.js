@@ -7,18 +7,18 @@ const status = {
 
 export default function EduCard({ data }) {
   return (
-    <div>
+    <div data-aos="fade-up">
         <div className=' shadow-black shadow-sm rounded-lg bg-white mt-6'>
-                <div class="lg:flex">
-                    <img style={{ 
+                <div class=" md:flex">
+                    <img  style={{ 
                         backgroundImage: 'url(/images/edu-bg.png)' , 
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
                     }} 
-                    class="p-4 rounded-lg lg:w-64" src={data.logo} alt=""/>
+                    className=" w-full md:w-auto p-4 rounded-lg lg:w-64" src={data.logo} alt=""/>
 
-                    <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <div class="flex flex-col justify-between px-4 py-6 lg:mx-6">
                         <div className=' flex flex-col'>
                             <h1  class="text-2xl font-bold text-red-600"> {data.qualification} </h1>
                             <h2  class="text-xl font-semibold "> {data.name} </h2>
