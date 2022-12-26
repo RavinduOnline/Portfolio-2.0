@@ -3,6 +3,7 @@ import {React, useState} from 'react'
 export default function ProjectCard( { data }) {
 
   const [ isReadMoreShown, setIsReadMoreShown] = useState(false);
+  let showWordCount = 100;
 
   const toggleBtn = () => {
     setIsReadMoreShown(prevState => !prevState)
@@ -19,22 +20,27 @@ export default function ProjectCard( { data }) {
                 <div className="font-bold text-xl">{data.title}</div>
                 <p className="text-gray-700 text-base mb-2">{data.date}</p>
                 <p className="text-gray-700 text-base">
-                     { isReadMoreShown ?  data.about : data.about.substr(0, 100) }
-                     <button onClick={toggleBtn} className=" text-red-500"> {isReadMoreShown ?  "..Read Less" :"...Read More"}</button>
+                     { isReadMoreShown ?  data.about : data.about.substr(0, showWordCount)}
+                    {
+                      data.about.length > showWordCount  &&
+                        <button onClick={toggleBtn} className=" text-red-500"> {  isReadMoreShown  ?  "..Read Less" :"...Read More"}</button>
+                    }
                 </p>
             </div>
 
             <div className="px-4 py-2 w-full flex">
               {
-                data.github ? 
-                  <a href={data.github} target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold mr-2'>Github</a>
-                : <></>
+                data.github && 
+                  <a href={data.github} target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold mr-2'>
+                    <i className="ri-github-fill align-middle"></i> Github
+                  </a>
               }
-
               {
-                data.demo ? 
-                  <a href={data.demo}  target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold'>Demo</a>
-                : <></>
+                data.demo &&
+                  <a href={data.demo}  target="_blank" rel="noopener noreferrer" className=' text-center w-full bg-gray-800 text-white p-1 rounded-md text-base font-semibold'>
+                    <i className="ri-earth-line align-middle"></i> Demo
+                  </a>
+                
               }
                 
             </div>

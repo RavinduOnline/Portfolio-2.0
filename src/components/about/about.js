@@ -36,7 +36,7 @@ const socialMedia = [
 export default function About() {
   return (
     <div> 
-        <h1 className=' text-center text-5xl text-red-500 font-bold'>- About Me -</h1>
+        <h1 className=' text-center text-5xl text-red-500 font-bold  drop-shadow-xl shadow-black'>- About Me -</h1>
       
         <div className='w-full h-auto flex my-12'>
             <div className='w-full'>
