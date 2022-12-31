@@ -1,5 +1,7 @@
 import React from 'react'
 
+const  CV = "/Document/CV of Ravindu Rasanga.pdf";
+
 const socialMedia = [
   {
     name:"Linkedin",
@@ -49,7 +51,7 @@ export default function About() {
 
                 <br/><br/>
 
-                <a data-aos="fade-up" href='' className='px-7 py-4 bg-red-500 rounded-xl text-lg text-white font-bold' download={true} >Download CV</a>
+                <a data-aos="fade-up"  target="_blank" href={CV} className='px-7 py-4 bg-red-500 rounded-xl text-lg text-white font-bold' download={true} rel="noreferrer" >Download CV</a>
             </div>
 
             <div className='w-full'>
@@ -58,7 +60,7 @@ export default function About() {
                 <div className='flex lg:px-8 mt-6 justify-evenly w-full' data-aos="fade-up">
                     {socialMedia.map(data=>(
 
-                            <a className='' href={data.link} target="_blank">
+                            <a className='' href={data.link} target="_blank" rel="noreferrer">
                               <img className=' h-12  md:h-20 lg:h-16 xl:h-24' src={data.logo} alt="" />
                             </a>
                     ))}
