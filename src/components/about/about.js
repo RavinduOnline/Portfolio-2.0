@@ -51,20 +51,31 @@ export default function About() {
 
                 <br/><br/>
 
-                <a data-aos="fade-up"  target="_blank" href={CV} className='px-7 py-4 bg-red-500 rounded-xl text-lg text-white font-bold' download={true} rel="noreferrer" >Download CV</a>
+                <a data-aos="fade-up"  target="_blank" href="https://drive.google.com/drive/folders/1FPCvW728mGT-ZChPn0gK6dP48xi0Nz6R?usp=sharing" className='px-7 py-4 bg-red-500 rounded-xl text-lg text-white font-bold' download={true} rel="noreferrer" >Download CV</a>
             </div>
 
             <div className='w-full'>
                 <h1 className='text-4xl text-red-500 font-bold' data-aos="fade-right"> Connect with Me 🔗</h1>
 
                 <div className='flex lg:px-8 mt-6 justify-evenly w-full' data-aos="fade-up">
-                    {socialMedia.map(data=>(
-
-                            <a className='' href={data.link} target="_blank" rel="noreferrer">
-                              <img className=' h-12  md:h-20 lg:h-16 xl:h-24' src={data.logo} alt="" />
-                            </a>
+                    {socialMedia.map((data, index) => (
+                      <a
+                        key={index} // Add a unique key for each item
+                        href={data.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${data.name}`} 
+                        className='transition-transform duration-300 hover:scale-110' 
+                      >
+                        <img
+                          className='h-12 md:h-16 lg:h-14 xl:h-20 w-auto' 
+                          src={data.logo}
+                          alt={`${data.name} logo`} 
+                          loading="lazy" 
+                        />
+                      </a>
                     ))}
-                </div>
+                  </div>
             </div>
             
         </div>

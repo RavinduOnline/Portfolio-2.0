@@ -1,6 +1,6 @@
  const ProjectData =[
     {
-        id:0,
+        id:11,
         title:"Portfolio 2.0",
         date:"2022 Dec",
         about:"I developed my portfolio 2.0 using React, Tailwind and some npm packages. Then I hosted it in firebase hosting. This was done as my personal project.",

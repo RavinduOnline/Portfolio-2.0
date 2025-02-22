@@ -4,7 +4,7 @@ const EduData = [
         qualification: "BSc (Hons) in Information Technology Specialising in Information Technology",
         logo : "/images/edu-logo/sliit.png",
         range:"2020 - 2024",
-        status : "Pursuing"
+        status : "Graduated"
     },
     {
         name : "Sri Subuthi National School",

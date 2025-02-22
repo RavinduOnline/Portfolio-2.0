@@ -3,21 +3,26 @@ import emailjs from 'emailjs-com'
 
 export default function Contact() {
 
-    function sendEmail (e) {
-        e.preventDefault();
-
-        emailjs.sendForm(
-            'raviportfolio', 
-            'template_raviweb',
-            e.target, 
-            'user_xLDBfhRx6qP0lu5Z1TmxO').then(res=>{
-                console.log(res); 
-                alert("Message Sent!");
-            }).catch(err=> {
-                console.log(err)
-                alert("Message has error! try again")
-            });
-
+    function sendEmail(e) {
+        e.preventDefault(); 
+    
+        // Get form data
+        const name = e.target.name.value;
+        const email = e.target.uemail.value;
+        const mobile = e.target.mobile.value;
+        const message = e.target.message.value;
+    
+        // Encode the subject and body for the mailto link
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nPhone: ${mobile}\nMessage: ${message}`
+        );
+    
+        // Construct the mailto link
+        const mailtoLink = `mailto:ravinduonline.mail@gmail.com?subject=${subject}&body=${body}`;
+    
+        // Open the default email client
+        window.location.href = mailtoLink;
     }
 
   return (
@@ -76,23 +81,23 @@ export default function Contact() {
                     <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
                     <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
                         <form onSubmit={sendEmail}>
-                        <div className="mb-6">
-                            <input type="text" name="name" placeholder="Your Name" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" required/>
-                        </div>
-                        <div className="mb-6">
-                            <input type="email" name="uemail" placeholder="Your Email" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" required/>
-                        </div>
-                        <div className="mb-6">
-                            <input type="text" name="mobile" placeholder="Your Phone" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
-                        </div>
-                        <div className="mb-6">
-                            <textarea rows={6} name="message" placeholder="Your Message" className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" defaultValue={""} required/>
-                        </div>
-                        <div>
-                            <button type="submit" value="Submit" className=" bg-red-500 border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90">
-                            Send Message
-                            </button>
-                        </div>
+                            <div className="mb-6">
+                                <input type="text" name="name" placeholder="Your Name" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" required/>
+                            </div>
+                            <div className="mb-6">
+                                <input type="email" name="uemail" placeholder="Your Email" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" required/>
+                            </div>
+                            <div className="mb-6">
+                                <input type="text" name="mobile" placeholder="Your Phone" className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" />
+                            </div>
+                            <div className="mb-6">
+                                <textarea rows={6} name="message" placeholder="Your Message" className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none" defaultValue={""} required/>
+                            </div>
+                            <div>
+                                <button type="submit" value="Submit" className=" bg-red-500 border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90">
+                                Send Message
+                                </button>
+                            </div>
                         </form>
                         <div>
                         <span className="absolute -top-10 -right-9 z-[-1]">

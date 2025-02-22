@@ -1,36 +1,73 @@
-import React from 'react'
-import SkillsData from '../../data/skills-data'
 
 
-
+import React, { useEffect, useState } from 'react';
 
 export default function Skills() {
+  const [skillsData, setSkillsData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(process.env.REACT_APP_PORTFOLIO_DATA_API_URL  + '?data=skills'); 
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setSkillsData(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center text-white">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500">Error: {error}</div>;
+  }
 
   return (
-    <div  style={{ zIndex: 800}}>
-        
-        <h1 className=' text-center text-5xl text-white font-bold' data-aos="zoom-in">- Skills & Abilities -</h1>
+    <div className="py-12" style={{ zIndex: 800 }}>
+      {/* Heading */}
+      <h1 className=' text-center text-5xl text-white font-bold' data-aos="zoom-in">- Skills & Abilities -</h1>
+      <br/> <br/>
 
-        <div className='w-full h-auto flex'>
-            <div className='w-full h-auto my-12'>
-              <div className="grid grid-cols-3 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-7 lg:gap-4">
-                  
-                  {SkillsData.map(data => (
-                        <div  data-aos="zoom-out">
-                            <div  className="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg">
-                                <div className=' min-w-full flex flex-col justify-center items-center p-5'>
-                                    <img src={data.icon} alt=""  className=' h-16 md:h-20 lg:h-28 mb-2'/>
-                                    <div  className=' text-center text-sm md:text-lg lg:text-xl text-white font-semibold'> {data.name} </div>
-                                </div>
-                            </div>
-                        </div>
-                  ))}
-                  
+      {/* Skills Grid */}
+      <div className="w-full h-auto flex justify-center">
+        <div className="w-full max-w-7xl px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            {skillsData.map((data, index) => (
+              <div
+                key={index}
+                data-aos="zoom-out"
+                className="group transform transition-all duration-300 hover:scale-105 h-full"
+              >
+                <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 h-full flex flex-col">
+                  <div className="flex flex-col justify-center items-center p-4 md:p-6 flex-grow">
+                    <img
+                      src={data.Icon}
+                      alt={`${data.Name} icon`}
+                      className="h-16 md:h-20 lg:h-24 mb-4"
+                      loading="lazy"
+                    />
+                    <div className="text-center text-sm md:text-base lg:text-lg text-white font-semibold">
+                      {data.Name}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
         </div>
-        
-
+      </div>
     </div>
-  )
+  );
 }
